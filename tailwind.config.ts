@@ -20,13 +20,19 @@ export default {
 		extend: {
 			colors: {
 				border: 'hsl(var(--border))',
-				input: 'hsl(var(--input))',
+				input: {
+					DEFAULT: 'hsl(var(--input))', // Border color for input
+					background: 'hsl(var(--input-background))'
+        },
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+          lightBlue: 'hsl(var(--primary-light-blue))',
+          darkBlue: 'hsl(var(--primary-dark-blue))',
+          tsbBlue: 'hsl(var(--primary-tsb-blue))' // explicit alias
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -42,7 +48,9 @@ export default {
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+					foreground: 'hsl(var(--accent-foreground))',
+          tealEsavings: 'hsl(var(--accent-teal-esavings))',
+          main: 'hsl(var(--accent-main))' // explicit alias
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -61,13 +69,28 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        // Direct color names from design spec for convenience
+        'tsb-blue': 'hsl(var(--primary-tsb-blue))',
+        'light-blue': 'hsl(var(--primary-light-blue))',
+        'dark-blue': 'hsl(var(--primary-dark-blue))',
+        'neutral-white': 'hsl(var(--neutral-white))',
+        'neutral-grey-bg': 'hsl(var(--neutral-grey-bg))',
+        'neutral-grey-divider': 'hsl(var(--neutral-grey-divider))',
+        'text-dark': 'hsl(var(--text-dark))',
+        'text-subtext-grey': 'hsl(var(--text-subtext-grey))',
+        'accent-teal': 'hsl(var(--accent-teal-esavings))', // for e-savings card
+        'accent-blue-main': 'hsl(var(--accent-main))', // for general accent use like accordion icon
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				lg: 'var(--radius-lg)', // 16px
+				md: 'var(--radius-md)', // 12px
+				sm: 'var(--radius-sm)', // 8px
+        pill: 'var(--radius-pill)' // 50px
 			},
+      fontFamily: {
+        sans: ['var(--font-sans)'],
+      },
 			keyframes: {
 				'accordion-down': {
 					from: {
