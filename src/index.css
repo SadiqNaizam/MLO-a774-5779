@@ -4,89 +4,125 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* TSB Theme - Light Mode */
+    /* Core Colors */
+    --primary-tsb-blue: 211 100% 35%; /* #0051b4 */
+    --primary-light-blue: 198 100% 44%; /* #00A3E1 */
+    --primary-dark-blue: 211 100% 23%; /* #003974 */
+    --accent-main: 198 100% 44%; /* #00A3E0 */
+    --accent-teal-esavings: 170 63% 44%; /* #27BBA2 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --neutral-white: 0 0% 100%; /* #FFFFFF */
+    --neutral-grey-bg: 0 0% 95%; /* #F3F3F3 (Page Background) */
+    --neutral-grey-divider: 0 0% 90%; /* #E5E5E5 (Borders, Tracks) */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --text-dark: 0 0% 18%; /* #2D2D2D (Primary Content Text) */
+    --text-subtext-grey: 0 0% 46%; /* #757575 (Secondary Info Text) */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Theme Variables */
+    --background: var(--neutral-grey-bg);
+    --foreground: var(--text-dark);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --card: var(--neutral-white);
+    --card-foreground: var(--text-dark);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --popover: var(--neutral-white);
+    --popover-foreground: var(--text-dark);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --primary: var(--primary-tsb-blue);
+    --primary-foreground: var(--neutral-white);
 
-    --destructive: 0 84.2% 60.2%;
+    --secondary: var(--neutral-grey-divider); /* Light grey bg for secondary elements */
+    --secondary-foreground: var(--text-dark);
+
+    --muted: var(--neutral-grey-bg); /* Or a slightly different off-white if needed */
+    --muted-foreground: var(--text-subtext-grey);
+
+    --accent: var(--accent-main);
+    --accent-foreground: var(--neutral-white); /* Assuming white text on accent */
+
+    --destructive: 0 84.2% 60.2%; /* Default red */
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: var(--neutral-grey-divider);
+    --input: var(--neutral-grey-divider); /* Input border color */
+    --input-background: var(--neutral-white); /* Input background color */
+    --ring: var(--primary-tsb-blue); /* Focus ring, TSB Blue */
 
-    --radius: 0.5rem;
+    /* Radius */
+    --radius: 1rem; /* 16px for cards/major elements */
+    --radius-sm: 0.5rem; /* 8px */
+    --radius-md: 0.75rem; /* 12px */
+    --radius-lg: var(--radius); /* 16px */
+    --radius-pill: 50px; /* For pill-shaped buttons */
 
-    --sidebar-background: 0 0% 98%;
+    /* Typography */
+    --font-sans: "Inter", "Helvetica Neue", "SF Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar Variables (aligned with main theme) */
+    --sidebar-background: var(--card);
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* TSB Theme - Dark Mode (Example Inversions/Placeholders) */
+    --primary-tsb-blue: 211 100% 35%;
+    --primary-light-blue: 198 100% 44%;
+    --primary-dark-blue: 211 100% 23%;
+    --accent-main: 198 100% 44%;
+    --accent-teal-esavings: 170 63% 44%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --neutral-white: 0 0% 100%;
+    --neutral-grey-bg-dark: 0 0% 10%; /* Example: Very dark grey for page BG */
+    --neutral-grey-divider-dark: 0 0% 25%; /* Example: Darker grey for borders */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --text-dark-darkmode: 0 0% 95%; /* Example: Light grey/off-white text */
+    --text-subtext-grey-darkmode: 0 0% 60%; /* Example: Lighter subtext */
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --background: var(--neutral-grey-bg-dark);
+    --foreground: var(--text-dark-darkmode);
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --card: 0 0% 15%; /* Example: Dark grey for cards */
+    --card-foreground: var(--text-dark-darkmode);
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --popover: 0 0% 15%;
+    --popover-foreground: var(--text-dark-darkmode);
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --primary: var(--primary-light-blue); /* Use light blue for better contrast in dark mode */
+    --primary-foreground: var(--neutral-grey-bg-dark); /* Dark text on light blue */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: var(--text-dark-darkmode);
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --muted: 0 0% 20%;
+    --muted-foreground: var(--text-subtext-grey-darkmode);
+
+    --accent: var(--accent-main);
+    --accent-foreground: var(--neutral-grey-bg-dark); /* Dark text on accent if accent is light */
+
+    --destructive: 0 72% 51%; /* Darker red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: var(--neutral-grey-divider-dark);
+    --input: var(--neutral-grey-divider-dark);
+    --input-background: 0 0% 12%; /* Dark input background */
+    --ring: var(--primary-light-blue); /* Light blue for focus ring in dark mode */
+
+    /* Sidebar Variables (aligned with dark main theme) */
+    --sidebar-background: var(--card);
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
   }
 }
 
@@ -97,5 +133,6 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
   }
 }
